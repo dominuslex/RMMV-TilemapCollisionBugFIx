@@ -16,11 +16,6 @@
 
         for (const tile of tiles) {
             const flag = flags[tile];
-            //console.log(tile);
-
-            if((tile >= 5888 & tile <= 6224) || (tile >=6656 & tile <= 6992) || (tile >= 7424 & tile <= 7760)){
-                console.log(tile);
-            }
 
             if ((flag & bit) === bit) {
                 // [x] Impassable
@@ -30,17 +25,12 @@
                 }
             }
         }
+        
         if (tempCheckPassableFlags > 0) {
             return false;
         } else {
             return true;
         }
     };
-
-    Game_Map.prototype.checkAutoTilePassage = function() {
-
-    }
-
-
 
 })();
